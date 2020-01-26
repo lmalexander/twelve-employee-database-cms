@@ -1,5 +1,6 @@
 -- seed file to pre-populate database for test purposes
 -- test company: popcom, black woman founded automated retail & blockchain company
+-- source: https://www.popcom.shop/about-us#Team-Section
 
 --- 1) make departments
 --- 2) make roles corresponding to departments

@@ -15,8 +15,31 @@ const connection = mysql.createConnection({
 });
 
 // ---------- inquirer.prompt start()
+// prompt user for an action
+// run function based on user choice
+function start() {
+    inquirer.prompt(
+        {
+            name: "userAction",
+            type: "list",
+            message: "Employee Tracker Options:",
+            choices: [
+                "{ADD NEW} department",
+                "{ADD NEW} role",
+                "{ADD NEW} employee",
+                "{VIEW ALL} departments",
+                "{VIEW ALL} roles",
+                "{VIEW ALL} employees",
+                "{UPDATE} employee roles"
+            ]
+        }
+    )
+/*     .then(function(answer) {
 
-// ---------- user options
+    }) */
+}
+
+// ---------- userAction options
 // -------- add new 
 // ----- departments
 // ----- roles
@@ -39,4 +62,5 @@ connection.connect(function(err) {
         return;
     }
     console.log("connected as id " + connection.threadId);
+    start();
 });
